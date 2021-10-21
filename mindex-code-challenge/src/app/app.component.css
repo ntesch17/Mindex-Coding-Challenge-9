@@ -1,0 +1,14 @@
+* {
+    font-family: sans-serif;
+}
+
+html {
+    background-color: aliceblue;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 60px;
+    color: blue;
+    margin: 8px 0 4px;
+}

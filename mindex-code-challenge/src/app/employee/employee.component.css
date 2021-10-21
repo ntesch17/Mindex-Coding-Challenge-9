@@ -1,0 +1,55 @@
+.mat-card-content {
+    height: 100px;
+}
+
+.employeeHeader .employeeTitle {
+    margin: 0 0 4px;
+    font-size: 1.0rem;
+    font-weight: 400;
+    color: #1976d2
+}
+
+.employeeHeader .employeeSubtitle {
+    margin: 0 0 0 0px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.mat-card-footer {
+    padding: 16px;
+}
+
+.mat-card-footer span {
+    color: #aaa;
+    font-size: 0.75rem;
+}
+
+.employee table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employee table thead tr th {
+    background-color: #2196f3;
+    color: #fff;
+    height: 10px;
+    padding: 8px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.employee table tbody tr:nth-of-type(even) {
+    background-color: #eee;
+    height: 20px;
+}
+
+.employee table tbody tr td:nth-of-type(1) {
+    padding: 2px 0px;
+    height: 20px;
+}
+
+.employee table tbody tr td:nth-of-type(2) {
+    float: right;
+    height: 20px;
+}

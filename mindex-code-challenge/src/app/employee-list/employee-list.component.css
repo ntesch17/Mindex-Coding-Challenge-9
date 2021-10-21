@@ -1,0 +1,16 @@
+app-employee {
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.employee-list {
+    margin: auto;
+}

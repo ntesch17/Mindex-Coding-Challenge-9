@@ -1,0 +1,53 @@
+<mat-card class="employee">
+
+    <div class="employeeHeader">
+        <h1 class="employeeTitle">{{employee.firstName}} {{employee.lastName}}</h1>
+        <h2 class="employeeSubtitle">{{employee.position}}</h2>
+    </div>
+
+    <mat-card-content>
+        <ng-container *ngIf="employeesThatReport?.length > 0; else elseBlock">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Direct Reports ({{employeesThatReport?.length || '0'}})</mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-container *ngIf="employeesThatReport?.length > 0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Employee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let employ of employeesThatReport">
+                                <td>{{employ.firstName}} {{employ.lastName}}</td>
+                                <td>
+                                    <button mat-icon-button title="Edit Employee's Compensation" (click)="editClick(employ)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                                    <button mat-icon-button title="Delete report" (click)="deleteClick(employ)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ng-container>
+            </mat-expansion-panel>
+        </ng-container>
+        <ng-template #elseBlock>
+            <mat-expansion-panel disabled>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>Direct Reports (0)</mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+        </ng-template>
+    </mat-card-content>
+
+    <mat-card-footer>
+        <span>Employee ID: {{employee.id}}</span>
+    </mat-card-footer>
+
+</mat-card>
+
+<app-employee-dialog></app-employee-dialog>
